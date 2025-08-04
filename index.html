@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGEnKRishna</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio - Thumbnails</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
+  <h1>Welcome to My Portfolio</h1>
+  <p>Here are some of my thumbnail design projects:</p>
 
-    <!-- Search Bar at Top-Right -->
-    <div class="search-container">
-        <input type="text" id="search-box" placeholder="Search here...">
-        <button onclick="searchFunction()">Search</button>
-    </div>
-
-    <!-- Centered Heading -->
-    <h1>Welcome to my Portfolio</h1>
-
-    <p id="result"></p> <!-- Search result appears here -->
-
+  <div class="gallery">
+    <img src="images/thumb1.jpg" alt="Thumbnail 1">
+    <img src="images/thumb2.jpg" alt="Thumbnail 2">
+    <img src="images/thumb3.jpg" alt="Thumbnail 3">
+    <img src="images/thumb4.jpg" alt="Thumbnail 4">
+  </div>
 </body>
 </html>
