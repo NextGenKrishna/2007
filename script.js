@@ -1,4 +1,3 @@
-alert("Welcome to DemandingHack!");
 function searchFunction() {
     let query = document.getElementById("search-box").value.toLowerCase();
     let result = document.getElementById("result");
