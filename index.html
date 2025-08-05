@@ -32,6 +32,30 @@
       transform: scale(1.05);
     }
   </style>
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;           /* all images equal height */
+  object-fit: cover;       /* crop nicely */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);   /* zoom on hover */
+  z-index: 5;              /* make sure it shows above neighbors */
+  position: relative;      /* needed with z-index */
+}
+  </style>
 </head>
 <body>
   <h1>Welcome to My Portfolio</h1>
