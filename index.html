@@ -26,7 +26,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       max-width: 1000px;
       margin: auto;
@@ -35,15 +35,15 @@
 
     .gallery img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 200px;          /* 🔹 same height for all thumbnails */
+      object-fit: cover;      /* 🔹 crop extra parts */
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2);
+      transform: scale(1.2);  /* 🔹 zoom effect */
       z-index: 5;
       position: relative;
     }
@@ -60,6 +60,7 @@
     <img src="images/thumb4.png" alt="Thumbnail 4">
     <img src="images/thumb5.png" alt="Thumbnail 5">
     <img src="images/thumb6.png" alt="Thumbnail 6">
+    <img src="images/thumb7.png" alt="Thumbnail 7"> <!-- ✅ Added this -->
   </div>
 </body>
 </html>
