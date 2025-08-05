@@ -9,14 +9,15 @@
 
 .gallery img {
   width: 100%;
-  height: 200px;            /* Make all thumbnails equal height */
-  object-fit: cover;        /* Crop image nicely */
+  height: 200px;           /* all images equal height */
+  object-fit: cover;       /* crop nicely */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, z-index 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.3);   /* Expand on hover */
-  z-index: 10;             /* Bring above other images */
+  transform: scale(1.2);   /* zoom on hover */
+  z-index: 5;              /* make sure it shows above neighbors */
+  position: relative;      /* needed with z-index */
 }
